@@ -7,6 +7,7 @@ package org.example.sort;
 import org.example.Swap;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class QuickSort implements Swap {
     public static void main(String[] args) {
