@@ -6,13 +6,11 @@ public class MergeTwoArrays {
     public static void main(String[] args) {
         int[] a = new int[]{1,3,5,6,8,9,10};
         int[] b = new int[]{2,4,6,7,8,30,40};
-        int[] c = new int[a.length + b.length];
-
 
 
         System.out.println(Arrays.toString(megre(a,0,b,0)));
 
-        int array[] = new int[]{123, 123, 5543, 234, 74, 234, 234, 7, 567, 6789, 67, 745, 52, 5, 346, 56, 7, 56, 345, 34, 6, 68, 56, 234, 23, 5, 7, 567, 45, 63, 53, 456, 567};
+        int array[] = new int[]{123, 123, 5543, 234, 3,1,2,74, 234, 234, 7, 567, 6789, 67, 745, 52, 5, 346, 56, 7, 56, 345, 34, 6, 68, 56, 234, 23, 5, 7, 567, 45, 63, 53, 456, 567};
         System.out.println(Arrays.toString(sortArray(array)));
 
     }
