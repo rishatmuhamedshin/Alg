@@ -1,5 +1,8 @@
 package org.example.tree1;
 
+import org.example.stack.SimpleQueue;
+import org.example.stack.SimpleStack;
+
 public class tree {
     public static void main(String[] args) {
         Tree root =
@@ -52,5 +55,51 @@ public class tree {
 
             return sum;
         }
+        public static int sumDeepWithStack(Tree root){
+
+            SimpleStack<Tree> stack = new SimpleStack<>();
+            stack.push(root);
+
+            int sum = 0;
+
+            while(!stack.isEmpty()){
+                Tree node = stack.pop();
+                sum += node.value;
+
+                if(node.left != null){
+                    stack.push(node.left);
+                }
+                if(node.right != null){
+                    stack.push(node.left);
+                }
+            }
+
+            return sum;
+
+        }
+        public static int sumWidthWithQueue(Tree root){
+
+            SimpleQueue<Tree> queue = new SimpleQueue<>();
+            queue.add(root);
+
+            int sum = 0;
+
+            while(!queue.isEmpty()){
+                Tree node = queue.remove();
+                sum += node.value;
+
+                if(node.left != null){
+                    queue.add(node.left);
+                }
+                if(node.right != null){
+                    queue.add(node.left);
+                }
+            }
+
+            return sum;
+
+        }
+
+
     }
 }
